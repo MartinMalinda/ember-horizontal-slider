@@ -1,0 +1,14 @@
+<div class="grid-wrap">
+	<div class="horizontal-grid" style={{gridWidthStyle}}>
+		{{#each limitedContent as |image|}}
+			{{slider-item
+			  image=image
+			  beforePick=(action 'clearPicks')
+			  afterPick=afterPick
+			}}
+		{{/each}}
+	</div>
+</div>
+{{#unless allItemsDisplayed}}
+	<button {{action "increaseLimit" 5}}> Increase limit</button>
+{{/unless}}
