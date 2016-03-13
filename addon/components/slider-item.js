@@ -20,7 +20,6 @@ export default Ember.Component.extend({
   },
 
   touchStart(){
-  	this.click();
   }
 
 });
