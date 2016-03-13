@@ -68,6 +68,6 @@ export default Ember.Route.extend({
 		width: 200,
 		height: 200,
 		picked: false,
-	}]
+	}];
 	}
 });
