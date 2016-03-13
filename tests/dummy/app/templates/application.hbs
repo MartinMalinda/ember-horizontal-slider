@@ -7,4 +7,6 @@
 	{{slider-item src="images/fourth.png"}}
 {{/ember-image-slider}} --}}
 
-{{ember-image-slider content=model afterPick=(action 'pickImage')}}
+{{#ember-image-slider content=model afterPick=(action 'pickImage') as |image|}}
+	<div>{{image.width}}</div>
+{{/ember-image-slider}}

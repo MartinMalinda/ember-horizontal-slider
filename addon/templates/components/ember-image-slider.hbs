@@ -1,11 +1,13 @@
 <div class="grid-wrap">
 	<div class="horizontal-grid" style={{gridWidthStyle}}>
 		{{#each limitedContent as |image|}}
-			{{slider-item
+			{{#slider-item
 			  image=image
 			  beforePick=(action 'clearPicks')
 			  afterPick=afterPick
 			}}
+				{{yield image}}
+			{{/slider-item}}
 		{{/each}}
 	</div>
 </div>
