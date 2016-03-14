@@ -1,4 +1,4 @@
 
-{{#ember-image-slider content=model spacingWidth=60 afterPick=(action 'pickImage') as |image|}}
+{{#ember-image-slider content=model limit=40 spacingWidth=60 afterPick=(action 'pickImage') as |image|}}
 	<div>{{image.width}}</div>
 {{/ember-image-slider}}

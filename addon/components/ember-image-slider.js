@@ -33,7 +33,7 @@ export default Ember.Component.extend({
 
   nextSlide: computed('limitedContent.[]','scrollLeft','containerWidth', function(){
     return this.get('limitedContent').find((slide) => {
-      return slide.get('offsetLeft') > (this.get('scrollLeft') + this.get('containerWidth') - slide.get('width')*0.9);
+      return slide.get('offsetLeft') > (this.get('scrollLeft') + this.get('containerWidth') - slide.get('width')*0.5);
     });
   }),
 
