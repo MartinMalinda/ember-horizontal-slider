@@ -1,7 +1,7 @@
 {
   "name": "ember-image-slider",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember addon. Image slider and picker.",
   "directories": {
     "doc": "doc",
     "test": "tests"
