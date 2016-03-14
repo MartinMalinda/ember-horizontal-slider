@@ -9,23 +9,10 @@ export default Ember.Component.extend({
   classNames: ['ember-image-slider'],
 
   limit: 5,
-  spacingWidth: 0,
   scrollLeft: 0,
-  containerWidth: null, // computed in didInsertElement(), TODO: recompute in didResize()
+  containerWidth: null, // computed in didInsertElement() and onResize()
   animationTime: 200,
-
-  gridWidth: computed('limitedContent.[]','spacingWidth', function(){
-    return this.get('limitedContent').reduce((prev, current) => {
-      if(!$.isNumeric(prev)) {
-        prev = 0;
-      }
-      return prev + current.get('width') + this.get('spacingWidth');
-    });
-  }),
-
-  shouldDisplayArrows: computed('gridWidth', 'containerWidth', function(){
-    return this.get('gridWidth') > this.get('containerWidth');
-  }),
+  shouldDisplayArrows: true,
 
   convertedContent: computed('content.[]', function(){
   	return this.get('content').map((image) => {
