@@ -94,7 +94,6 @@ export default Ember.Component.extend({
 
     moveRight(){
       const gridWrap = this.get('$gridWrap');
-      console.log(this.get('nextSlide'));
       gridWrap.animate({scrollLeft: this.get('nextSlide.offsetLeft') - this.get('containerWidth') + this.get('nextSlide.width') + 10}, this.get('animationTime'));
     }
   }

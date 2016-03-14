@@ -22,7 +22,11 @@ export default Ember.Component.extend({
   	const newIsPickedValue = !this.get('image.picked');
   	this.get('beforePick')();
   	this.set('image.picked', newIsPickedValue);
-  	this.get('afterPick')(this.get('image'));
+    let output = this.get('image');
+    if(!newIsPickedValue){
+      output = null;
+    }
+  	this.get('afterPick')(output);
   },
 
   touchStart(){
