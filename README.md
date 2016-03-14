@@ -1,26 +1,54 @@
-# Ember-image-slider
+# Ember-image-slider (and picker)
 
-This README outlines the details of collaborating on this Ember addon.
+Still alpha :).
 
-## Installation
+## Install
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+### 1. Install the addon
+``` ember install ember-image-slider```
 
-## Running
+### 2. Insert styles
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+Import the scss from the dummy app: https://github.com/MartinMalinda/ember-image-slider/blob/master/tests/dummy/app/styles/app.scss
 
-## Running Tests
+(currently uses material icons, you may need to import the material icons font or style navigation arrows yourself)
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+## Usage
 
-## Building
+Insert the component in your template:
 
-* `ember build`
+```hbs 
+{{#ember-image-slider
+	content=model
+	limit=40
+	shouldDisplayArrows=true
+	afterPick=(action 'pickImage') as |image|}}
+	<div>This image has width:{{image.width}}</div>
+{{/ember-image-slider}}
+```
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+Content is expected to be an array of objects with src and width properties:
+
+```javascript
+
+images: [{
+		src: 'img1.jpg',
+		width: 200,
+		myImageName: 'Image 1'
+	},
+	{
+		src: 'img2.jpg',
+		width: 400
+	},
+	{
+		src: 'img3.jpg',
+		width: 600
+	}]
+
+```
+
+##Notes
+
+Multiselection should be easily achievable by overriding the beforePick action. 
+
+
