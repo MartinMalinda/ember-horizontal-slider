@@ -1,0 +1,115 @@
+.ember-image-slider {
+	$animation-time: 0.3s;
+	// max-width: 66.66%;
+	align-items: center;
+	margin: 5px auto;
+	position: relative;
+	// left: -25px;
+
+	.horizontal-grid {
+		display: flex;
+		flex-flow: row nowrap;
+		width: 90vw;
+	}
+
+	md-input-container {
+		padding: 0;
+	}
+
+	.slider-item {
+		margin: 10px;
+		vertical-align: middle;
+		cursor: pointer;
+		transform: scale(1);
+		transition: $animation-time transform;
+		
+		/*flex:1;*/
+
+		&::after {
+				content: "\e834";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-family: 'Material Icons';
+				color: transparent;
+				font-size: 2em;
+				transition: $animation-time color;
+		}
+
+		&.picked {
+
+			&::after {
+				color: green;
+			}
+			
+		}
+
+		&.picked img {
+			transform: scale(1.1);
+		}
+
+
+		img {
+			/*max-width: 100%;*/
+			transition: 0.3s transform;
+			transform: scale(1);
+			margin-bottom: 10px;
+		}
+	}
+
+	.arrow {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		height: 2em;
+		font-size: 2em;
+		padding: 10px;
+
+		&::before {
+			content: "";
+			display: block;
+			height: 2em;
+		}
+
+		&.left {
+			left: 0;
+
+			&::before {
+				content: "<";
+			}
+		}
+
+		&.right {
+			right: 0;
+
+			&::before {
+				content: ">";
+			}
+		}
+	}
+}
+
+.grid-wrap {
+	width: 100%;
+	overflow-x: auto;
+}
+
+.content-wrap {
+	position: relative;
+}
+
+.slider-wrap {
+	background: white;
+	margin-bottom: 25px;
+
+	.image-selection-label {
+		position: relative;
+		left: -20px;
+	}
+
+	md-input-container {
+		padding: 0;
+	}
+}

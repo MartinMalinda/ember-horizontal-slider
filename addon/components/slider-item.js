@@ -12,6 +12,12 @@ export default Ember.Component.extend({
   	return htmlSafe(`max-width:${this.get('image.width')}px;`);
   }),
 
+  didInsertElement(){
+    this.set('image.outerWidth', $(this.element).outerWidth());
+    this.set('image.offsetLeft', $(this.element).offset().left);
+    console.log(this.get('image'));
+  },
+
   click(){
   	const newIsPickedValue = !this.get('image.picked');
   	this.get('beforePick')();

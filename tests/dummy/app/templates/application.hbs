@@ -1,12 +1,4 @@
 
-{{!-- {{outlet}} --}}
-
-{{!-- {{#ember-image-slider}}
-	{{slider-item src="images/first.jpg"}}
-	{{slider-item src="images/third.png"}}
-	{{slider-item src="images/fourth.png"}}
-{{/ember-image-slider}} --}}
-
-{{#ember-image-slider content=model afterPick=(action 'pickImage') as |image|}}
+{{#ember-image-slider content=model spacingWidth=60 afterPick=(action 'pickImage') as |image|}}
 	<div>{{image.width}}</div>
 {{/ember-image-slider}}

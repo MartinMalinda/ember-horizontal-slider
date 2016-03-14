@@ -1,15 +1,28 @@
-<div class="grid-wrap">
-	<div class="horizontal-grid" style={{gridWidthStyle}}>
-		{{#each limitedContent as |image|}}
-			{{#slider-item
-			  image=image
-			  beforePick=(action 'clearPicks')
-			  afterPick=afterPick
-			}}
-				{{yield image}}
-			{{/slider-item}}
-		{{/each}}
+shouldDisplayArrows: {{shouldDisplayArrows}} <br>
+gridWidth: {{gridWidth}} <br>
+containerWidth: {{containerWidth}} <br>
+<div class="content-wrap">
+	<div class="grid-wrap">
+		<div class="horizontal-grid" style={{gridWidthStyle}}>
+			{{#each limitedContent as |image|}}
+				{{#slider-item
+				  image=image
+				  beforePick=(action 'clearPicks')
+				  afterPick=afterPick
+				}}
+					{{yield image}}
+				{{/slider-item}}
+			{{/each}}
+		</div>
 	</div>
+	{{#if shouldDisplayArrows}}
+		{{#if previousSlide}}
+			<div {{action "moveLeft"}} class="arrow left"></div>
+		{{/if}}
+		{{#if nextSlide}}
+			<div {{action "moveRight"}} class="arrow right"></div>
+		{{/if}}
+	{{/if}}
 </div>
 {{#unless allItemsDisplayed}}
 	<button {{action "increaseLimit" 5}}> Increase limit</button>
