@@ -37,9 +37,9 @@ export default Ember.Component.extend({
     });
   }),
 
-  previousSlide: computed('descendingContent.[]', 'scrollLeft', 'containerWidth', function(){
+  previousSlide: computed('descendingContent.[]', 'scrollLeft', function(){
     return this.get('descendingContent').find((slide) => {
-      return slide.get('offsetLeft') < (this.get('scrollLeft'));
+      return (slide.get('offsetLeft') < this.get('scrollLeft') && this.get('scrollLeft') > 0);
     });
   }),
 
