@@ -8,8 +8,9 @@ export default Ember.Component.extend({
   layout,
   classNames: ['slider-item'],
   classNameBindings: ['image.picked'],
+  attributeBindings: ['style'],
   style: computed('image.width', 'image.height', function(){
-  	return htmlSafe(`max-width:${this.get('image.width')}px;`);
+  	return htmlSafe(`flex:0 0 ${this.get('image.width')}px;`);
   }),
 
   didInsertElement(){

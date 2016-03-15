@@ -23,7 +23,7 @@
 		transform: scale(1);
 		transition: $animation-time transform;
 		
-		/*flex:1;*/
+		flex:1;
 
 		&::after {
 				content: "\e834";
@@ -51,10 +51,11 @@
 
 
 		img {
-			/*max-width: 100%;*/
+			max-width: 100%;
 			transition: 0.3s transform;
 			transform: scale(1);
 			margin-bottom: 10px;
+
 		}
 	}
 
