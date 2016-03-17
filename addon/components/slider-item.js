@@ -16,7 +16,6 @@ export default Ember.Component.extend({
   didInsertElement(){
     this.set('image.outerWidth', $(this.element).outerWidth());
     this.set('image.offsetLeft', $(this.element).position().left);
-    console.log(this.get('image'));
   },
 
   click(){
