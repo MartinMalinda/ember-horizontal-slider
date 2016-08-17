@@ -4,69 +4,97 @@ export default Ember.Route.extend({
 	model(){
 		return [
 	{
-		src:'images/first.jpg',
-		height: 200,
-		width: 200,
+		src:'images/pirate.png',
+		height: 378,
+		width: 327,
 		picked: false
 	},
 	{
-		src:'images/third.png',
-		height: 200,
-		width: 200,
+		src:'images/zoey.png',
+		height: 378,
+		width: 327,
 		picked: false
 	},
 	{
-		src: 'images/fourth.png',
-		width: 200,
-		height: 200,
+		src: 'images/sandiego-zoey.png',
+		width: 327,
+		height: 378,
 		picked: false
 	},
 	{
-		src: 'images/fourth.png',
-		width: 200,
-		height: 200,
+		src: 'images/teaching.png',
+		width: 327,
+		height: 378,
+		picked: false,
+	},	{
+		src:'images/pirate.png',
+		height: 378,
+		width: 327,
+		picked: false
+	},
+	{
+		src:'images/zoey.png',
+		height: 378,
+		width: 327,
+		picked: false
+	},
+	{
+		src: 'images/sandiego-zoey.png',
+		width: 327,
+		height: 378,
+		picked: false
+	},
+	{
+		src: 'images/teaching.png',
+		width: 327,
+		height: 378,
+		picked: false,
+	},	{
+		src:'images/pirate.png',
+		height: 378,
+		width: 327,
+		picked: false
+	},
+	{
+		src:'images/zoey.png',
+		height: 378,
+		width: 327,
+		picked: false
+	},
+	{
+		src: 'images/sandiego-zoey.png',
+		width: 327,
+		height: 378,
+		picked: false
+	},
+	{
+		src: 'images/teaching.png',
+		width: 327,
+		height: 378,
 		picked: false,
 	},
 	{
-		src: 'images/fourth.png',
-		width: 200,
-		height: 200,
-		picked: false,
+		src:'images/pirate.png',
+		height: 378,
+		width: 327,
+		picked: false
 	},
 	{
-		src: 'images/fourth.png',
-		width: 200,
-		height: 200,
-		picked: false,
+		src:'images/zoey.png',
+		height: 378,
+		width: 327,
+		picked: false
 	},
 	{
-		src: 'images/fourth.png',
-		width: 200,
-		height: 200,
-		picked: false,
+		src: 'images/sandiego-zoey.png',
+		width: 327,
+		height: 378,
+		picked: false
 	},
 	{
-		src: 'images/fourth.png',
-		width: 200,
-		height: 200,
-		picked: false,
-	},
-	{
-		src: 'images/fourth.png',
-		width: 200,
-		height: 200,
-		picked: false,
-	},
-	{
-		src: 'images/fourth.png',
-		width: 200,
-		height: 200,
-		picked: false,
-	},
-	{
-		src: 'images/fourth.png',
-		width: 200,
-		height: 200,
+		src: 'images/teaching.png',
+		width: 327,
+		height: 378,
 		picked: false,
 	}];
 	}
