@@ -1,6 +1,6 @@
 # Ember-image-slider (and picker)
 
-Still alpha :).
+DEMO: http://martinmalinda.github.io/ember-timerange-picker/
 
 ## Install
 
